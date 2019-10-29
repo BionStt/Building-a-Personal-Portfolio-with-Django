@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1>ALL JOBS</h1>
+<dl>
+{% for job in jobs.all %}
+<dt><strong>{{job.name}}</strong></dt>
+<dd>{{job.summary}}</dd>
+{% endfor %}
+</dl>
+<p>
+<a href="{% url 'test_home' %}">Home</a>
+</p>
+<p>
+<a href="{% url 'test_blog' %}">Blog</a>
+</p>
+{% endblock %}
